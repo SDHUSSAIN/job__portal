@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="icon.png" alt="logo">
+            <h1>FastJobs</h1>
+        </div>
+    </div>
+    <div class="search__box">
+        <div class="search__icon">
+            <i class="fa fa-search" ></i>
+        </div>
+        <div class="search__input">
+            <input type="text" id="input__box" placeholder="write your search query here...">
+        </div>
+        <div class="search__button">
+            <button id="search__button" >Search</button>
+        </div>
+    </div>
+    <hr>
+
+    <div class="card__container" id="jobsContainer">
+        
+    </div>
+    
+    <!-- The Apply Modal -->
+    <div id="applyModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal__header">
+                <h3>Application Form</h3>
+                <span class="close" id="applyClose">&times;</span>
+            </div>
+            <div class="job__details">
+                
+            </div>
+        
+        <form action="">
+            <div class="input__row">
+                <input type="text" placeholder="First Name" id="first__name" required/>
+                <input type="text" placeholder="Last Name" id="last__name" required/>
+            </div>
+            <div class="input__row">
+                <input type="number" placeholder="Phone No" id="phone__no" required pattern="[0-9]{10}">
+                <input type="email" placeholder="Eamil" id="email" required>
+            </div>
+            <div class="input__row">
+                <input type="file" placeholder="Upload Your Resume" id="file" required>
+            </div>
+            <br>
+            <div class="input__row submit__btn">
+                <button type="submit" id="application__submit" onclick="showAlert('Your Application Submitted Successfully')">Submit</button>
+            </div>
+            <div class="input__row"><br><br/></div>
+        </form>
+        
+        </div>
+    
+    </div>
+    <!-- The Message Modal -->
+    <div id="messageModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <div class="modal__header">
+                <h3>Send Your Message</h3>
+                <span class="close" id="messageClose">&times;</span>
+            </div>
+            <div class="message__job__details">
+                
+            </div>
+        <form action="" class="message__form">
+            <input type="text" placeholder="Your Name" required><br>
+            <input type="phone" placeholder="Your Phone No" required><br>
+            <textarea cols="30" rows="5" placeholder="Write your message...."></textarea><br><br>
+            <button type="submit">Send</button>
+            <br></br>
+        </form>
+            
+        </div>
+    
+    </div>
+
+    <script src="action.js"></script>
+    
+</body>
+</html>
